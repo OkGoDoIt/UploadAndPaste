@@ -1,6 +1,6 @@
 ﻿# Upload And Paste
 
-This is a small Windows tool that allows you to paste the contents of the clipboard as plaintext (removing formatting).  Additionally it automatically upload images and files on the clipboard to a server and pastes the url.  This provides functionality similar to CloudApp, except on your own server for free.  It supports FTP, SFTP, SCP, AWS S3, WebDav, via the included WinSCP library.
+This is a small Windows tool that allows you to paste the contents of the clipboard as plaintext (removing formatting).  Additionally it automatically uploads images and files on the clipboard to a server and pastes the url.  This provides functionality similar to CloudApp, except on your own server for free.  It supports FTP, SFTP, SCP, AWS S3, WebDav, via the included WinSCP library.
 
 Here is an example screenshot from my dev machine uploaded this way: ![http://rog.gy/ss/dd4299790b.png](http://rog.gy/ss/dd4299790b.png)
 I simply pressed Alt-PrintScreen on my keyboard to take a screenshot of my active app, then Ctrl-Shift-V to paste the URL of the uploaded screenshot.
@@ -8,9 +8,9 @@ I simply pressed Alt-PrintScreen on my keyboard to take a screenshot of my activ
 ## Functionality
 
   1.	If content of clipboard is a file, it uploads that file to the server and pastes the public URL.
-  2.    If content of the clipboard is an image (such as a screenshot or other raw bitmap data), it saves to a png and uploads to the server, pasting the public URL.
+  2.	If content of the clipboard is an image (such as a screenshot or other raw bitmap data), it saves to a png and uploads to the server, pasting the public URL.
   3.	If content of clipboard is rich text or HTML, it pastes the plain text without formatting.
-  4.    If none of the above, it silently aborts.
+  4.	If none of the above, it silently aborts.
 
 In all supported cases it pastes a plain text, easily sharable representation of the content.
 

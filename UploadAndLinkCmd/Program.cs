@@ -111,7 +111,7 @@ namespace UploadAndLinkCmd
 				Output(UploadFile(new FileInfo(Clipboard.GetFileDropList()[0])));
 			else if (Clipboard.ContainsText())
 			{
-				Thread.Sleep(100);
+				Thread.Sleep(100); // Sometimes there are issue with focus if we do this too fast
 				Output(Clipboard.GetText(TextDataFormat.UnicodeText));
 			}
 			else
@@ -145,8 +145,8 @@ namespace UploadAndLinkCmd
 				.Replace(")", "{)}")
 				.Replace("[", "{[}")
 				.Replace("]", "{]}");
+
 			Debug.WriteLine(text);
-			//Thread.Sleep(200);
 			SendKeys.SendWait(text);
 		}
 
@@ -158,7 +158,7 @@ namespace UploadAndLinkCmd
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine(ex.ToString());
+				MessageBox.Show(ex.ToString());
 				throw;
 			}
 
@@ -194,7 +194,7 @@ namespace UploadAndLinkCmd
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine(ex.ToString());
+				MessageBox.Show(ex.ToString());
 				throw;
 			}
 			finally
@@ -214,7 +214,7 @@ namespace UploadAndLinkCmd
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine(ex.ToString());
+				MessageBox.Show(ex.ToString());
 				throw;
 			}
 
@@ -267,7 +267,7 @@ namespace UploadAndLinkCmd
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine(ex.ToString());
+				MessageBox.Show(ex.ToString());
 				throw;
 			}
 			finally
