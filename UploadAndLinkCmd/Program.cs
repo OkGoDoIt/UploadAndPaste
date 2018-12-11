@@ -164,8 +164,15 @@ namespace UploadAndLinkCmd
 
 		private static string UploadFile(FileInfo file)
 		{
+			IntPtr normalCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_NORMAL));
+			IntPtr iBeamCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_IBEAM));
+
 			try
 			{
+				SetSystemCursor(CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_APPSTARTING)), OCR_NORMAL);
+				SetSystemCursor(CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_APPSTARTING)), OCR_IBEAM);
+
+
 				using (Session session = new Session())
 				{
 					// Connect
@@ -190,13 +197,25 @@ namespace UploadAndLinkCmd
 				Console.WriteLine(ex.ToString());
 				throw;
 			}
+			finally
+			{
+				SetSystemCursor(normalCursor, OCR_NORMAL);
+				SetSystemCursor(iBeamCursor, OCR_IBEAM);
+
+			}
 
 		}
 
 		private static string UploadImage(Bitmap cbImage)
 		{
+			IntPtr normalCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_NORMAL));
+			IntPtr iBeamCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_IBEAM));
+
 			try
 			{
+				SetSystemCursor(CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_APPSTARTING)), OCR_NORMAL);
+				SetSystemCursor(CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_APPSTARTING)), OCR_IBEAM);
+
 				byte[] rawImageData = new byte[Math.Min(2048 * 2048, cbImage.Width * cbImage.Height)];
 				BitmapData bmpd = cbImage.LockBits(new Rectangle(0, 0, cbImage.Width, cbImage.Height),
 													   ImageLockMode.ReadOnly,
@@ -239,9 +258,27 @@ namespace UploadAndLinkCmd
 				Console.WriteLine(ex.ToString());
 				throw;
 			}
+			finally
+			{
+				SetSystemCursor(normalCursor, OCR_NORMAL);
+				SetSystemCursor(iBeamCursor, OCR_IBEAM);
+			}
+
 
 		}
 
+		[DllImport("user32.dll")]
+		static extern bool SetSystemCursor(IntPtr hcur, uint id);
 
+		[DllImport("user32.dll")]
+		static extern IntPtr LoadCursor(IntPtr hInstance, int lpCursorName);
+
+
+		[DllImport("user32.dll")]
+		public static extern IntPtr CopyIcon(IntPtr pcur);
+
+		private const uint OCR_IBEAM = 32513;
+		private const uint OCR_NORMAL = 32512;
+		private const uint OCR_APPSTARTING = 32650;
 	}
 }
