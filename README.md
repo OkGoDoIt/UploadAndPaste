@@ -40,3 +40,7 @@ In all supported cases it pastes a plain text, easily sharable representation of
 
 1.  When there are multiple files on the clipboard, it only uploads one.
 2.  There is no progress indicatior, so large uploads may appear to stall on slow connections.  The mouse cursor changes to the wait cursor so you know it's working.
+
+## Why
+
+I created this tool to scratch my own itch.  I hope you find it useful!  Feel free to report any bugs or suggestions you may find.  More information about this [clipboard upload tool](https://rogerpincombe.com/upload-and-paste) on [my homepage](https://rogerpincombe.com).
