@@ -62,7 +62,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="ReadMe.md" />
     <None Include="server-config.example3.json" />
     <None Include="server-config.example2.json" />
     <None Include="server-config.example.json" />
