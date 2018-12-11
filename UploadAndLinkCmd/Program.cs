@@ -105,18 +105,6 @@ namespace UploadAndLinkCmd
 		[STAThread]
 		static void Main(string[] args)
 		{
-			try
-			{
-				LoadConfig("server-config.json");
-			}
-			catch (Exception ex)
-			{
-				Console.WriteLine(ex.ToString());
-				throw;
-			}
-
-
-
 			if (Clipboard.ContainsImage())
 				Output(UploadImage(Clipboard.GetImage() as Bitmap));
 			else if (Clipboard.ContainsFileDropList())
@@ -164,6 +152,18 @@ namespace UploadAndLinkCmd
 
 		private static string UploadFile(FileInfo file)
 		{
+			try
+			{
+				LoadConfig("server-config.json");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.ToString());
+				throw;
+			}
+
+
+
 			IntPtr normalCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_NORMAL));
 			IntPtr iBeamCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_IBEAM));
 
@@ -208,6 +208,18 @@ namespace UploadAndLinkCmd
 
 		private static string UploadImage(Bitmap cbImage)
 		{
+			try
+			{
+				LoadConfig("server-config.json");
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.ToString());
+				throw;
+			}
+
+
+
 			IntPtr normalCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_NORMAL));
 			IntPtr iBeamCursor = CopyIcon(LoadCursor(IntPtr.Zero, (int)OCR_IBEAM));
 
