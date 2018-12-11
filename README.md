@@ -40,4 +40,3 @@ In all supported cases it pastes a plain text, easily sharable representation of
 
 1.  When there are multiple files on the clipboard, it only uploads one.
 2.  There is no progress indicatior, so large uploads may appear to stall on slow connections.  The mouse cursor changes to the wait cursor so you know it's working.
-3.  Every time you press Ctrl-Shift-V it re-uploads.  There is no caching.  It will however re-upload to a consistant name, so at least you aren't wasting space with duplicate data.

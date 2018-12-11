@@ -133,6 +133,8 @@ namespace UploadAndLinkCmd
 
 		private static void Output(string text)
 		{
+			Clipboard.SetText(text);
+
 			text = text
 				.Replace("{", "{`{")
 				.Replace("}", "{}}")
