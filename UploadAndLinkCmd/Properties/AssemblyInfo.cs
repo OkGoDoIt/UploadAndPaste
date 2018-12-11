@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UploadAndLink")]
+[assembly: AssemblyTitle("Upload and Paste")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UploadAndLink")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCompany("Roger Pincombe")]
+[assembly: AssemblyProduct("Upload and Paste Tool")]
+[assembly: AssemblyCopyright("Copyright ©2018 Roger Pincombe")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bc4bb5ac-3093-4b53-8e40-e62510729485")]
+[assembly: Guid("123b3797-d176-4409-91ab-40a667e0455b")]
 
 // Version information for an assembly consists of the following four values:
 //

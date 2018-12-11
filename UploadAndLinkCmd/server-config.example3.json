@@ -1,0 +1,9 @@
+﻿{
+	"Protocol": "Ftp",
+	"HostName": "mysite.com",
+	"PortNumber": 21,
+	"UserName": "username",
+	"Password": "Pa$$w0rd",
+	"baseUploadPath": "shares/",
+	"baseUrl": "http://www.mysite.com/shares/"
+}

@@ -1,0 +1,9 @@
+﻿{
+	"Protocol": "S3",
+	"HostName": "s3.amazonaws.com",
+	"PortNumber": 443,
+	"UserName": "EUJBCIU47839HCR98HS7",
+	"Password": "kjgs8793dh9823chern8hnbGH897FHRE890hn49a",
+	"baseUploadPath":"bucketName/",
+	"baseUrl":"https://myPublicS3URLroot.amazon-s3.com/"
+}

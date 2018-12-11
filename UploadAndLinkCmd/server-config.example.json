@@ -1,0 +1,11 @@
+﻿{
+	"Protocol": "Sftp",
+	"HostName": "example.com",
+	"UserName": "root",
+	"SshHostKeyFingerprint": "ssh-ed25519 256 Jgd3476348hg8BG88g8g787g8787G98HNFD45SCJHiw=",
+	"SshPrivateKeyPath": "C:\\Users\\me\\.ssh\\id-rsa.ppk",
+	"baseUploadPath":"/var/www/mysite/",
+	"baseUrl":"https://example.com/",
+	"fileDir": "share/",
+	"ssDir": "ss/"
+}
