@@ -146,7 +146,9 @@ namespace UploadAndLinkCmd
 				.Replace("(", "{(}")
 				.Replace(")", "{)}")
 				.Replace("[", "{[}")
-				.Replace("]", "{]}");
+				.Replace("]", "{]}")
+				.Replace(Environment.NewLine, "{Enter}")
+				.Replace("\n", "{Enter}");
 
 			Debug.WriteLine(text);
 			SendKeys.SendWait(text);
